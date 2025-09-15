@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h1>Tic-Tac-Toe</h1>
+                <p>Choose your game mode</p>
+                <div class="mode-buttons">
+                    <button id="pvp-btn" class="btn btn--primary btn--lg mode-btn">
+                        Player vs Player
+                    </button>
+                    <button id="pvc-btn" class="btn btn--secondary btn--lg mode-btn">
+                        Player vs Computer
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Difficulty Screen -->
+        <div id="difficulty-screen" class="screen">
+            <div class="difficulty-content">
+                <h2>Choose Difficulty</h2>
+                <p>Select AI difficulty level</p>
+                <div class="difficulty-buttons">
+                    <button id="easy-btn" class="btn btn--outline difficulty-btn" data-difficulty="easy">
+                        Easy
+                        <span class="difficulty-desc">Random moves</span>
+                    </button>
+                    <button id="medium-btn" class="btn btn--outline difficulty-btn" data-difficulty="medium">
+                        Medium
+                        <span class="difficulty-desc">Smart moves</span>
+                    </button>
+                    <button id="hard-btn" class="btn btn--outline difficulty-btn" data-difficulty="hard">
+                        Hard
+                        <span class="difficulty-desc">Expert AI</span>
+                    </button>
+                </div>
+                <button id="back-to-welcome" class="btn btn--secondary back-btn">
+                    ← Back to Menu
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="game-content">
+                <!-- Game Header -->
+                <div class="game-header">
+                    <div class="score-board">
+                        <div class="score-item">
+                            <span class="score-label">Player X</span>
+                            <span id="score-x" class="score-value">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label" id="player-o-label">Player O</span>
+                            <span id="score-o" class="score-value">0</span>
+                        </div>
+                    </div>
+                    <button id="back-to-menu" class="btn btn--secondary back-btn">
+                        ← Menu
+                    </button>
+                </div>
+
+                <!-- Game Status -->
+                <div class="game-status">
+                    <div id="current-player" class="status-display">
+                        Player X's Turn
+                    </div>
+                </div>
+
+                <!-- Game Board -->
+                <div id="game-board" class="game-board">
+                    <div class="board-cell" data-index="0"></div>
+                    <div class="board-cell" data-index="1"></div>
+                    <div class="board-cell" data-index="2"></div>
+                    <div class="board-cell" data-index="3"></div>
+                    <div class="board-cell" data-index="4"></div>
+                    <div class="board-cell" data-index="5"></div>
+                    <div class="board-cell" data-index="6"></div>
+                    <div class="board-cell" data-index="7"></div>
+                    <div class="board-cell" data-index="8"></div>
+                </div>
+
+                <!-- Game Controls -->
+                <div class="game-controls">
+                    <button id="new-game-btn" class="btn btn--primary">
+                        New Game
+                    </button>
+                    <button id="reset-score-btn" class="btn btn--outline">
+                        Reset Score
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Result Modal -->
+        <div id="result-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="result-content">
+                    <div id="result-icon" class="result-icon"></div>
+                    <h3 id="result-title">Game Over</h3>
+                    <p id="result-message">Result message</p>
+                    <div class="result-actions">
+                        <button id="play-again-btn" class="btn btn--primary">
+                            Play Again
+                        </button>
+                        <button id="main-menu-btn" class="btn btn--secondary">
+                            Main Menu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
