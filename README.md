@@ -1,3 +1,5 @@
+https://kenzo78766.github.io/SCT_WD_3/
+
 # Tic-Tac-Toe Game Application
 
 A modern, interactive Tic-Tac-Toe web application with AI opponent, multiple difficulty levels, and comprehensive game features, developed as part of an internship project at **SkillCraft Technology**.
